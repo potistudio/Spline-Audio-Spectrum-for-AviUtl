@@ -25,10 +25,7 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 	このスクリプトのライセンスについて書かれています。
 
 ## 導入方法
-  - 自分のAviUtlにrikky_moduleが導入されているかを確認します。
-  - 同梱のREADMEを読んで、使い方、注意事項を確認します。
-  - AE_AudioSpectrum.objをAviUtlのscriptフォルダにコピーします。
-  - AviUtlを開いて、動作確認をします。
+  - **AE_Audio-Spectrum.obj**をAviUtlのscriptフォルダにコピーしてください。
 
 ## 設定項目
   - **トラックバー**<br>
