@@ -1,7 +1,5 @@
 # AE_Audio-Spectrum
 A Script for AviUtl that Draw an Audio Spectrum Like After Effects.
-
-# AE_AudioSpectrum
 AviUtlで音声波形を描画するスクリプトです。<br>
 FFTを使用しているので、[After Effects](https://www.adobe.com/jp/products/aftereffects.html)の音声波形とほぼ同じ形状、動きの波形ができます。<br>
 設定項目も、AfterEffectsとほぼ同じです。 (一部実装出来ていないものもあります)<br>
