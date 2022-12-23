@@ -9,14 +9,15 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 [Rikky Module](https://hazumurhythm.com/wev/amazon/?script=NRMv2q9Q&keyword=rikky_module&search_price=&sort=viewh&filter=all&page=1)を導入している必要があります。
 
 ## ファイル内容
+  - **Screenshots**<br>
+    このスクリプトで描画された音声波形の画像です。
+    ご参考に
+
   - **AE_AudioSpectrum.obj**<br>
 	スクリプト本体です。
 
   - **README.md**<br>
 	Markdown形式のREADMEです。
-
-  - **README.txt**<br>
-	Text形式のREADMEです。
 
   - **LICENSE**<br>
 	このスクリプトのライセンスについて書かれています。
