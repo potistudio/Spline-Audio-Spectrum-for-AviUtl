@@ -4,6 +4,8 @@ A Script for AviUtl that Draw an Audio Spectrum Like After Effects.
 # AE_AudioSpectrum
 AviUtlで音声波形を描画するスクリプトです。<br>
 FFTを使用しているので、[After Effects](https://www.adobe.com/jp/products/aftereffects.html)の音声波形と同じ形状、動きの波形ができます。
+設定項目も、AfterEffectsとほぼ同じです。 (一部実装出来ていないものもあります)
+また、補間に3次スプラインを使用しているため、非常に滑らかな波形を描画可能です。
 
 ## 要件
 [Rikky Module](https://hazumurhythm.com/wev/amazon/?script=NRMv2q9Q&keyword=rikky_module&search_price=&sort=viewh&filter=all&page=1)を導入している必要があります。
