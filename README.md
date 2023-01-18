@@ -93,6 +93,10 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 
 * 円形描画の際に、内側方向に中心を超えた線が描画されなくなります。
 
+## 実装予定
+
+* 左右対称な円形描画
+
 ## ライセンス
 GNU General Public License v2.0<br>
 詳しくは同梱のLICENSEをご覧ください。
