@@ -25,7 +25,8 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 	ライセンスについて書かれています。
 
 ## 導入方法
-  - *AE_Audio-Spectrum.obj*をAviUtlのscriptフォルダにコピーしてください。
+  - *Spline-Audio-Spectrum.obj*をAviUtlのscriptフォルダにコピーしてください。  
+    (通常のスクリプト導入方法と変わりません)
 
 ## 設定項目
   - **トラックバー**<br>
