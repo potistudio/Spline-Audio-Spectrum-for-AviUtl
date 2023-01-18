@@ -1,4 +1,4 @@
-# AE_Audio-Spectrum
+# Spline-Audio-Spectrum
 A Script for AviUtl that Draw an Audio Spectrum Like After Effects.<br>
 AviUtlで音声波形を描画するスクリプトです。<br>
 FFTを使用しているので、[After Effects](https://www.adobe.com/jp/products/aftereffects.html)の音声波形とほぼ同じ形状、動きの波形ができます。<br>
