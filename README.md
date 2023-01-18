@@ -8,6 +8,9 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 ## 要件
 [Rikky Module](https://hazumurhythm.com/wev/amazon/?script=NRMv2q9Q&keyword=rikky_module&search_price=&sort=viewh&filter=all&page=1)を導入している必要があります。
 
+必須ではありませんが、軽量化のために *LuaJIT* の導入を推奨します (体感2倍ぐらい軽くなります)  
+参考 → [LuaJITを導入して動作を高速化しよう！](https://aketama.work/aviutl-luajit)
+
 ## ファイル内容
   - **Screenshots**<br>
     このスクリプトで描画された音声波形の画像です。ご参考に
