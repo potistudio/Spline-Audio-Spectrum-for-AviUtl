@@ -90,3 +90,5 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 ## ライセンス
 GNU General Public License v2.0<br>
 詳しくは同梱のLICENSEをご覧ください。
+
+## スクリーンショット
