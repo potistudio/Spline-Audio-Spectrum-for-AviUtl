@@ -88,6 +88,10 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
    
  - 半径  
     丸くした時の半径を設定します
+    
+## 既知のバグ
+
+* 円形描画の際に、内側方向に中心を超えた線が描画されなくなります。
 
 ## ライセンス
 GNU General Public License v2.0<br>
