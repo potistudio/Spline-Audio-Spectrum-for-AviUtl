@@ -10,17 +10,16 @@ FFTを使用しているので、[After Effects](https://www.adobe.com/jp/produc
 
 ## ファイル内容
   - **Screenshots**<br>
-    このスクリプトで描画された音声波形の画像です。
-    ご参考に
+    このスクリプトで描画された音声波形の画像です。ご参考に
 
-  - **AE_AudioSpectrum.obj**<br>
+  - **Spline-AudioSpectrum.obj**<br>
 	スクリプト本体です。
 
   - **README.md**<br>
 	Markdown形式のREADMEです。
 
   - **LICENSE**<br>
-	このスクリプトのライセンスについて書かれています。
+	ライセンスについて書かれています。
 
 ## 導入方法
   - *AE_Audio-Spectrum.obj*をAviUtlのscriptフォルダにコピーしてください。
@@ -93,3 +92,6 @@ GNU General Public License v2.0<br>
 
 ## スクリーンショット
 ![001](./Screenshots/001.png)
+![002](./Screenshots/002.png)
+![003](./Screenshots/003.png)
+![004](./Screenshots/004.png)
