@@ -103,7 +103,7 @@ if endPoint < startPoint then ShowError ("終了位置", "small for 開始位置
 if endFrequency < startFrequency then ShowError ("終了周波数", "small for 開始周波数") end
 if startFrequency < 0 then ShowError ("開始周波数", "small") end
 if endFrequency < 0 then ShowError ("終了周波数", "small") end
-if sampleLevel < 0 then	ShowError ("サンプルレベル", "small") end
+if sampleLevel < 0 then ShowError ("サンプルレベル", "small") end
 if sampleLevel > 3 then ShowError ("サンプルレベル", "big") end
 if thickness < 0 then ShowError ("太さ", "small") end
 if displayOption < 0 then ShowError ("ディスプレイオプション", "small") end
@@ -112,7 +112,7 @@ if sideOption < 0 then ShowError ("サイドオプション", "small") end
 if sideOption > 2 then ShowError ("サイドオプション", "big") end
 if radius < 0 then ShowError ("半径", "small") end
 
--------- Main -------
+-------- Main --------
 if not error then
 	local buffer = {}
 	for i = 1, audioDuration do
