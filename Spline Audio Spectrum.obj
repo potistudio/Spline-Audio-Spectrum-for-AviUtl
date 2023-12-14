@@ -1,11 +1,11 @@
---track0: é–‹å§‹ä½ç½®, 0, 2000, 400
---track1: çµ‚äº†ä½ç½®, 0, 2000, 1520
---track2: å‘¨æ³¢æ•°å¸¯, 0, 1000, 100
---track3: é«˜ã•, 0, 1000, 200
+--track0: ŠJnˆÊ’u, 0, 2000, 400
+--track1: I—¹ˆÊ’u, 0, 2000, 1520
+--track2: ü”g”‘Ñ, 0, 1000, 100
+--track3: ‚‚³, 0, 1000, 200
 
---dialog: è‰²/col, local color=0xffffff; é–‹å§‹å‘¨æ³¢æ•°, local startFrequency=0; çµ‚äº†å‘¨æ³¢æ•°, local endFrequency=400; ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ™ãƒ«, local sampleLevel=3; AUDIOãƒ‡ã‚¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³, local audioDuration=1; AUDIOã‚ªãƒ•ã‚»ãƒƒãƒˆ, local audioOffset=0; å¤ªã•, local thickness=10; ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã‚ªãƒ—ã‚·ãƒ§ãƒ³, local displayOption=0; ã‚µã‚¤ãƒ‰ã‚ªãƒ—ã‚·ãƒ§ãƒ³, local sideOption=1; ä¸¸ãã™ã‚‹/chk, local isRounded=0; åŠå¾„, local radius=200;
+--dialog: F/col, local color=0xffffff; ŠJnü”g”, local startFrequency=0; I—¹ü”g”, local endFrequency=400; ƒTƒ“ƒvƒŠƒ“ƒOƒŒƒxƒ‹, local sampleLevel=3; •½‹Ï‰»ƒtƒŒ[ƒ€”ÍˆÍ, local audioDuration=1; ƒTƒ“ƒvƒŠƒ“ƒOƒtƒŒ[ƒ€ƒIƒtƒZƒbƒg, local audioOffset=0; ‘¾‚³, local thickness=10; •`‰æƒ^ƒCƒv, local displayOption=0; •`‰æ•ûŒü, local sideOption=1; ŠÛ‚­‚·‚é/chk, local isRounded=0; ”¼Œa, local radius=200;
 
--------- rikky_module Import --------
+-------- Import rikky_module --------
 package.cpath = package.cpath .. ";" .. obj.getinfo ("script_path"):match ("(.*\\).*\\") .. "?.dll"
 local bool, rikky_module = pcall (require, "rikky_module")
 if not bool then
@@ -14,7 +14,7 @@ if not bool then
 	return
 end
 
--------- Setting --------
+-------- Settings --------
 obj.setfont ("MS UI Gothic", 50, 0, 0xffffff)
 obj.setoption ("drawtarget", "tempbuffer", obj.screen_w, obj.screen_h)
 
@@ -90,29 +90,21 @@ function CubicSpline (array, t)
 	return a[i] + (b[i] + (c[i] + d[i] * dt) * dt) * dt
 end
 
-function MinClamp (value, min)
-	if value < min then
-		return min
-	else
-		return value
-	end
-end
+-------- Show Errors --------
+if endPoint < startPoint then ShowError ("I—¹ˆÊ’u", "small for ŠJnˆÊ’u") end
+if endFrequency < startFrequency then ShowError ("I—¹ü”g”", "small for ŠJnü”g”") end
+if startFrequency < 0 then ShowError ("ŠJnü”g”", "small") end
+if endFrequency < 0 then ShowError ("I—¹ü”g”", "small") end
+if sampleLevel < 0 then ShowError ("ƒTƒ“ƒvƒ‹ƒŒƒxƒ‹", "small") end
+if sampleLevel > 3 then ShowError ("ƒTƒ“ƒvƒ‹ƒŒƒxƒ‹", "big") end
+if thickness < 0 then ShowError ("‘¾‚³", "small") end
+if displayOption < 0 then ShowError ("ƒfƒBƒXƒvƒŒƒCƒIƒvƒVƒ‡ƒ“", "small") end
+if displayOption > 2 then ShowError ("ƒfƒBƒXƒvƒŒƒCƒIƒvƒVƒ‡ƒ“", "big") end
+if sideOption < 0 then ShowError ("ƒTƒCƒhƒIƒvƒVƒ‡ƒ“", "small") end
+if sideOption > 2 then ShowError ("ƒTƒCƒhƒIƒvƒVƒ‡ƒ“", "big") end
+if radius < 0 then ShowError ("”¼Œa", "small") end
 
--------- Exception Error --------
-if endPoint < startPoint then ShowError ("çµ‚äº†ä½ç½®", "small for é–‹å§‹ä½ç½®") end
-if endFrequency < startFrequency then ShowError ("çµ‚äº†å‘¨æ³¢æ•°", "small for é–‹å§‹å‘¨æ³¢æ•°") end
-if startFrequency < 0 then ShowError ("é–‹å§‹å‘¨æ³¢æ•°", "small") end
-if endFrequency < 0 then ShowError ("çµ‚äº†å‘¨æ³¢æ•°", "small") end
-if sampleLevel < 0 then ShowError ("ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ™ãƒ«", "small") end
-if sampleLevel > 3 then ShowError ("ã‚µãƒ³ãƒ—ãƒ«ãƒ¬ãƒ™ãƒ«", "big") end
-if thickness < 0 then ShowError ("å¤ªã•", "small") end
-if displayOption < 0 then ShowError ("ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã‚ªãƒ—ã‚·ãƒ§ãƒ³", "small") end
-if displayOption > 2 then ShowError ("ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã‚ªãƒ—ã‚·ãƒ§ãƒ³", "big") end
-if sideOption < 0 then ShowError ("ã‚µã‚¤ãƒ‰ã‚ªãƒ—ã‚·ãƒ§ãƒ³", "small") end
-if sideOption > 2 then ShowError ("ã‚µã‚¤ãƒ‰ã‚ªãƒ—ã‚·ãƒ§ãƒ³", "big") end
-if radius < 0 then ShowError ("åŠå¾„", "small") end
-
--------- Main --------
+-------- Main -------
 if not error then
 	local buffer = {}
 	for i = 1, audioDuration do
@@ -138,7 +130,8 @@ if not error then
 		end
 	end
 
-	--/ æç”» /--
+
+	--/ •`‰æ /--
 	local space = #spectrumBuffer / frequencyBand
 	local positionXBuffer = {}
 	for i = 0, frequencyBand - 1 do
@@ -147,9 +140,10 @@ if not error then
 
 
 	if isRounded == 0 then
-		obj.load ("figure", "å††", color, thickness)
+		obj.load ("figure", "‰~", color, thickness)
 		if displayOption ~= 1 then
 			for i = 1, #positionXBuffer, 1 / (frequencyBand / #positionXBuffer) do
+				-- space = math.log (space);
 				local spline = math.max (CubicSpline(spectrumBuffer, space * i), 0)
 				local index = math.floor (i)
 
@@ -167,7 +161,7 @@ if not error then
 			end
 		end
 
-		obj.load ("figure", "å››è§’å½¢", color, 1)
+		obj.load ("figure", "lŠpŒ`", color, 1)
 		if displayOption ~= 2 then
 			for i = 1, #positionXBuffer, 1 / (frequencyBand / #positionXBuffer) do
 				local y = math.max (CubicSpline(spectrumBuffer, space * i), 0)
@@ -212,18 +206,18 @@ if not error then
 			local index = math.floor (i)
 
 			if displayOption == 0 then
-				obj.load ("figure", "å††", color, thickness)
+				obj.load ("figure", "‰~", color, thickness)
 				obj.draw (deltaSin * radius, deltaCos * radius, 0)
 			end
 
 			if displayOption ~= 1 then
 				if sideOption ~= 2 then
-					obj.load ("figure", "å††", color, thickness * (1 + spline * height / radius))
+					obj.load ("figure", "‰~", color, thickness * (1 + spline * height / radius))
 					obj.draw (deltaSin * (spline * height + radius), deltaCos * (spline * height + radius), 0)
 				end
 
 				if sideOption ~= 1 then
-					obj.load ("figure", "å††", color, thickness * (1 - spline * height / radius))
+					obj.load ("figure", "‰~", color, thickness * (1 - spline * height / radius))
 					obj.draw (deltaSin * (spline * -height + radius), deltaCos * (spline * -height + radius), 0)
 				end
 			end
@@ -232,7 +226,7 @@ if not error then
 				local pos = { deltaSin * spline, deltaCos * spline }
 				local verticalVector = { deltaCos, -deltaSin }
 
-				obj.load ("figure", "å››è§’å½¢", color, 1)
+				obj.load ("figure", "lŠpŒ`", color, 1)
 
 				local S = {}
 				for i = 1, 4 do
