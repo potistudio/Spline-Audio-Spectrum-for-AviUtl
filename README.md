@@ -1,7 +1,7 @@
-# Spline Audio Spectrum
+# Spline Audio Spectrum for AviUtl
 
 A Script for AviUtl that Draws an Audio Spectrum with FFT.  
-AviUtlで音声波形を描画するスクリプトです。  
+AviUtlで音声波形を描画するAviUtlスクリプトです。  
 スペクトラム変換に*Rikky Module*のFFT、補間に3次スプラインを使用しているため、非常に滑らかな波形を描画可能です。
 
 ## 要件
